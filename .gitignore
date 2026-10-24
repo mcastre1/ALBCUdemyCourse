@@ -1,0 +1,45 @@
+# AL package references (downloaded symbols)
+.alpackages/
+
+# Compiled extension packages
+*.app
+
+# Build output
+.output/
+
+# VS Code settings (team-dependent)
+.vscode/settings.json
+.vscode/launch.json
+
+# User-specific VS Code files
+*.code-workspace
+
+# AL cache/temp files
+*.snapshots
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node (if you use npm tooling)
+node_modules/
+
+# Test results
+TestResults/
+
+# Coverage files
+coverage/
+
+# Backup files
+*.bak
+*.old
