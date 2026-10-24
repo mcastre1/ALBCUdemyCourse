@@ -16,6 +16,20 @@ tableextension 50101 "Sales Header Ext" extends "Sales Header"
             FieldClass = FlowField;
             CalcFormula = sum("Sales Line"."Amount Including VAT" where("Document Type" = field("Document Type"), "Document No." = field("No.")));
         }
+        field(50102; "Sales Line Exists"; Boolean)
+        {
+            Caption = 'Sales Line Exists';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = exist("Sales Line" where("Document Type" = field("Document Type"), "Document No." = field("No.")));
+        }
+        field(50103; "Contact Email"; Text[80])
+        {
+            Caption = 'Contact Email';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = lookup(Contact."E-Mail" where("No." = field("Sell-to Contact No.")));
+        }
 
     }
 
