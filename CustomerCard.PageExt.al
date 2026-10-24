@@ -8,14 +8,10 @@ pageextension 50101 "Customer Card Extension" extends "Customer Card"
             {
                 ApplicationArea = All;
                 ToolTip = 'Code of the car associated with the customer';
-
-                trigger OnValidate()
-                begin
-                    Rec.CalcFields("Car Description")
-                end;
             }
             field("Car Description"; Rec."Car Description")
             {
+                ApplicationArea = All;
                 ToolTip = 'Description of the car associated with the customer';
             }
         }
