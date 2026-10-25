@@ -22,7 +22,26 @@ page 50101 "Car List"
                     ApplicationArea = All;
                     ToolTip = 'Description of the car';
                 }
+                field(Blocked; Rec.Blocked)
+                {
+                    ApplicationArea = All;
+                }
             }
+        }
+    }
+
+    views
+    {
+        view(ActiveCars)
+        {
+            Caption = 'Active Cars';
+            Filters = where(Blocked = const(false));
+        }
+
+        view(BlockedCars)
+        {
+            Caption = 'Blocked Cars';
+            Filters = where(Blocked = const(true));
         }
     }
 }

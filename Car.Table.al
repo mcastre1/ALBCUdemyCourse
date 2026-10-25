@@ -17,6 +17,10 @@ table 50101 Car
             DataClassification = ToBeClassified;
 
         }
+        field(3; "Blocked"; Boolean)
+        {
+            Caption = 'Blocked';
+        }
 
     }
 
