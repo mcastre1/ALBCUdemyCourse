@@ -41,13 +41,17 @@ page 50102 "Student Registration List"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(MarkAsCompleted)
             {
+                Caption = 'Mark as Completed';
                 ApplicationArea = All;
+                ToolTip = 'Mark the selected registration as completed.';
 
                 trigger OnAction();
                 begin
-
+                    Rec.Completed := true;
+                    Rec."Registration Date" := WorkDate();
+                    Rec.Modify();
                 end;
             }
         }
